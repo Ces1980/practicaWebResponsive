@@ -34,6 +34,14 @@
     el área de relleno o el área del borde (dependiendo del 'tamaño de cuadro') 
     de ciertos cuadros. */
     height: auto;
+    /* Las columnas dentro de una fila están flotando a la izquierda, y por lo tanto se toman fuera del 
+    flujo de la página, y otros elementos serán colocados como si no fueran de las columnas.
+    PAra evitar esto, se añade un estilo que despeje el flujo*/
+    clear: both;
+    /* La propiedad display con el atributo table ayuda a que no haya texto delante de la fila
+    Probar comentando la propiedad y declara texto dentro del html despues de la ultima 
+    las ultimas cajas de las filas */
+    display: table;
 }
 
 
@@ -52,6 +60,13 @@ utilizando la declaración entre corchetes */
 }
 
 
+/* Regla de tres para sacar proporcionalidad de las cajas */
+
+
+/* El total de columnas es 12, para saber el tamaño de las otras 11
+debemos hacer una regla de tres: n*100 / 12 */
+
+
 /* Clase (.col-12) para cuando una caja html necesite ocupar las 
 12 columnas */
 
@@ -60,9 +75,33 @@ utilizando la declaración entre corchetes */
     width: 100%;
 }
 
+.col-11 {
+    width: 91.66666667%;
+}
+
+.col-10 {
+    width: 83.33333333%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-8 {
+    width: 66.66666666%;
+}
+
+.col-7 {
+    width: 58.3333333333%;
+}
+
 .col-6 {
     /* Tamaño que va a ocupar la caja a lo ancho */
     width: 50%;
+}
+
+.col-5 {
+    width: 41.66666666%;
 }
 
 .col-4 {
@@ -71,4 +110,12 @@ utilizando la declaración entre corchetes */
 
 .col-3 {
     width: 25%;
+}
+
+.col-2 {
+    width: 16.66666666%;
+}
+
+.col-1 {
+    width: 8.33333333%;
 }
