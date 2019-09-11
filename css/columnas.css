@@ -37,31 +37,38 @@
 }
 
 
+/* Declarando propiedades para todas las clases que tengan como inicio "col-"
+utilizando la declaración entre corchetes */
+
+[class*="col-"] {
+    /* Alineando texto que aparece dentro de las cajas al centro */
+    text-align: center;
+    /* Poner a flotar la caja con el atributo float*/
+    float: left;
+    /* Dando borde solido con gruso de 1px y de color negro */
+    border: 1px solid black;
+    /* Dando margen interno a la caja */
+    padding: 20px;
+}
+
+
 /* Clase (.col-12) para cuando una caja html necesite ocupar las 
 12 columnas */
 
 .col-12 {
-    text-align: center;
+    /* Tamaño que va a ocupar la caja a lo ancho */
     width: 100%;
-    /* Dandole borde y color a la caja que da estilo la clase col-12 */
-    border: 1px solid black;
-    padding: 20px;
 }
 
 .col-6 {
-    text-align: center;
-    /* Poner a flotar la caja con el atributo float*/
-    float: left;
+    /* Tamaño que va a ocupar la caja a lo ancho */
     width: 50%;
-    border: 1px solid black;
-    padding: 20px;
 }
 
 .col-4 {
-    text-align: center;
-    /* Poner a flotar la caja */
-    float: left;
     width: 33.33333333%;
-    border: 1px solid black;
-    padding: 20px;
+}
+
+.col-3 {
+    width: 25%;
 }
